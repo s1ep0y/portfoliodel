@@ -14,7 +14,7 @@ router.get('/projectlist', async (req, res) =>{
 router.get('/', async (req, res) => {
     const latestProjects = await Project.find({}).sort('-createdAt')
     console.log(latestProjects)
-    latestProjects.length = 2
+    latestProjects.length = 3
     res.render('index', {latestProjects});
 })
 
