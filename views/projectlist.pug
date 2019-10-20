@@ -1,0 +1,14 @@
+extends ./templates/layout.pug
+include ./templates/mixins.pug
+
+block content
+    .container-fluid
+        p.background &lt;#PROJECTS&gt;
+        div.btsPrj
+                    a(href="/") back
+        .row.justify-content-center
+            .col-10.col-md-7.projects
+                p.prjtsArticle Projects list
+                    if projects
+                        each project in projects
+                            +project(project.name , project.about , project.used , project.link )

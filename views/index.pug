@@ -1,0 +1,30 @@
+extends ./templates/layout.pug
+include ./templates/mixins.pug
+
+block content
+    .container-fluid
+        p.background &lt;#PORTFOLIO&gt;
+        .row.justify-content-around
+            .col-12.col-md-6.lpart
+                div.bigText 
+                    p Hello. I’m Danila, developer from Saint-Petersburg, Russia.
+                div.contacts
+                    P Contacts: 
+                    div.contacts-link
+                        li
+                            a(href="mailto:danmol04@gmail.com") danmol04@gmail.com
+                        li
+                            a(href="tg://resolve?domain=s1ep0y") telegram
+                        li
+                            a(href="https://bitbucket.org/s1ep0y") bitbucket
+                        li
+                            a(href="https://instagram.com/s1ep0y") instagram
+                        li
+                            a(href="https://vk.com/s1ep0y") vkontakte
+            .col-12.col-md-6.projects
+                p.prjtsArticle Latest Projects
+                    if latestProjects
+                        each project in latestProjects
+                            +project(project.name , project.about , project.used , project.link )
+                        div.viewall
+                            a(href="/projectlist") View all 

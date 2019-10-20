@@ -1,0 +1,7 @@
+mixin project(name, about, used, link, id)
+    div.project
+        p.name
+            a(href=link)=name
+        p.about=about
+        p.used='Used: ' + used
+    
