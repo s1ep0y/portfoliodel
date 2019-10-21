@@ -4,6 +4,7 @@ phases:
   install:
     runtime-versions:
         nodejs: 10
-  build:
-    commands:
-      - node --version
+
+artifacts:
+  files:
+    - '**/*'
