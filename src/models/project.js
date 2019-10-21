@@ -1,5 +1,6 @@
 const mongoose = require('mongoose')
 const validator = require('validator')
+const bcrypt = require('bcryptjs')
 
 const Project = mongoose.model('Project',{
     name: {
@@ -30,6 +31,9 @@ const Project = mongoose.model('Project',{
     createdAt: {
         type: Date, 
         default: Date.now
+    },
+    password:{
+        
     }
 })
 

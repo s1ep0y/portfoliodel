@@ -4,6 +4,7 @@ const projectRouter = require('./routes/project')
 const pageRouter = require('./routes/pages')
 const bodyParser = require('body-parser')
 const methodOverride = require('method-override')
+const bcrypt = require('bcryptjs')
 require('./db/mongoose')
 
 const app = express();
@@ -20,3 +21,15 @@ app.use(pageRouter)
 app.listen(port, () => {
     console.log(`Server is up on port ${port}`);
 });
+
+const myFunction = async() =>{
+    const password = 'danm0l'
+    const hashpas = await bcrypt.hash(password, 8)
+    console.log(password)
+    console.log(hashpas)
+
+    const isMatch = await bcrypt.compare('password1', hashpas)
+    console.log(isMatch)
+}
+
+myFunction()

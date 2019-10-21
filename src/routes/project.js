@@ -1,6 +1,7 @@
 const express = require('express')
 const router = new express.Router()
 const Project = require('../models/project')
+const bcrypt = require('bcryptjs')
 
 router.post('/projects', async (req, res) =>{
     const project = new Project(req.body)

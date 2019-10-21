@@ -35,7 +35,7 @@ div.lpart {
     position: relative;
     div.bigText {
         p {
-            
+            padding-top: 30px;
             @media (min-width: 768px) {
                 padding-top: 100px;
             }
@@ -50,6 +50,9 @@ div.lpart {
             @media (max-width: 1150px) {
                 @include font-size(2.4)
             }
+            @media (max-width: 400px) {
+                @include font-size(2.1)
+            }
             @media (min-width: 1600px) {
                 @include font-size(3.4)
             }
@@ -58,8 +61,8 @@ div.lpart {
     div.contacts {
         @media (max-width: 767.98px) {
             position: absolute;
-            left: 20%;
-            bottom: 25%;
+            left: 27%;
+            bottom: 5%;
         }
         @media (min-width: 768px) {
             margin-left: 40px;
@@ -95,9 +98,9 @@ div.lpart {
                 }
             }
         }
-    } // HERE WILL BE MOBILE PART
+    } 
     @media (max-width: 767.98px) {
-        height: 100vh;
+        height: 90vh;
     }
 }
 
