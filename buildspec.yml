@@ -1,5 +1,10 @@
 version: 0.2
 
+phases:
+  install:
+    runtime-versions:
+        nodejs: 11.1
+
 artifacts:
   files:
     - '**/*'
