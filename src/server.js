@@ -20,6 +20,3 @@ app.use(pageRouter)
 app.listen(port, () => {
     console.log(`Server is up on port ${port}`);
 });
-
-
-myFunction()
