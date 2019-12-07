@@ -17,9 +17,9 @@ router.get('/', async (req, res) => {
     res.render('index', {latestProjects});
 })
 
-router.get('/admin', async (req, res) =>{
-    res.render('admin')
-})
+// router.get('/admin', async (req, res) =>{
+//     res.render('admin')
+// })
 
 
 module.exports = router
